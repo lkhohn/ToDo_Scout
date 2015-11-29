@@ -25,4 +25,10 @@
     // set those values equal to the form
     $('#lat').val(lat);
     $('#lng').val(lng);
+
+    localStorage.setItem('lat', lat);
+    localStorage.setItem('lng', lng);
+    console.log(localStorage.getItem('lat'));
+    console.log(localStorage.getItem('lng'));
+
   });
