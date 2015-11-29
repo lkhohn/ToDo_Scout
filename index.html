@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>ToDo Scout</title>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-  </head>
-  <body>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>ToDo Scout</title>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-  <div class='row'>
-    <div class='col-md-12'>
-      <h1>ToDo Scout</h1>
+</head>
+
+<body>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h1>ToDo Scout</h1>
+      </div>
+    </div>
+
+    <form>
+      <input type='hidden' name='lat' id='lat'>
+      <input type='hidden' name='lng' id='lng'>
+    </form>
+
+    <div class='row' id='map'>
+      <div class='col-md-12'>
+      </div>
     </div>
   </div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV27rjUQoC_np17lGCrD4hmuIpA0ne4pg&signed_in=true"></script>
 
-  <form>
-    <input type='hidden' name='lat' id='lat'>
-    <input type='hidden' name='lng' id='lng'>
-  </form>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src='app.js'></script>
 
-  <div class='row' id='map'>
-    <div class='col-md-12'>
-    </div>
-  </div>
+</body>
 
-  <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV27rjUQoC_np17lGCrD4hmuIpA0ne4pg&signed_in=true"></script>
-
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src='app.js'></script>
-
-  </body>
 </html>
