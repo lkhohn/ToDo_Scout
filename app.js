@@ -52,6 +52,11 @@
 // user can drag dropped pin to the general meeting area
 // based on the dragged dropped pin, map shows the closest starbucks locations
 
+// map opens that automatically determines the users location
+// pin in dropped at users current location
+// user can drag dropped pin to the general meeting area
+// based on the dragged dropped pin, map shows the closest starbucks locations
+
 var map;
 var infoWindow;
 var service;
@@ -113,7 +118,7 @@ function performSearch() {
 
 function callback(results, status) {
   if (status !== google.maps.places.PlacesServiceStatus.OK) {
-    console.error(status);
+    console.log(status);
     return;
   }
   for (var i = 0, result; result = results[i]; i++) {
@@ -145,7 +150,13 @@ function addMarker(place) {
       infoWindow.setContent(result.name + "<br />" + result.formatted_address + "<br />" + result.website + "<br />" + result.formatted_phone_number + "<br />" + result.opening_hours.weekday_text);
       infoWindow.open(map, marker);
 
-      $('#mtgLocation').val(result.name + " " + result.formatted_address + " " + result.website + " " + result.formatted_phone_number);
+      $('#mtgAddress').val(result.formatted_address);
+
+      var lat = marker.getPosition().lat();
+      var lng = marker.getPosition().lng();
+      // set those values equal to the form
+      $('#loc_lat').val(lat);
+      $('#loc_lng').val(lng);
 
     });
   });
