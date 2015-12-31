@@ -18,7 +18,12 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* map page */
+router.get('/map', function(req, res, next){
+  res.render('./map');
+});
 
+/* Login page */
 router.get('/login', function(req, res, next) {
   res.render('./login');
 });
