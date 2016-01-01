@@ -52,12 +52,12 @@
         <input class="btn btn-default" id="downButton" type="button" value="down" onclick="moveDown('selected')">
       </div>
 
-      <p>drag the pin to your location</p>
+      <p>where are you located?</p>
 
-      <div class='row' id='map'>
-        <div class='col-md-12'>
-        </div>
-      </div>
+
+      <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+      <div id="map"></div>
+
 
       <div class="form-group">
         <button type="submit" class="btn btn-default">submit</button>
@@ -66,11 +66,13 @@
     </form>
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV27rjUQoC_np17lGCrD4hmuIpA0ne4pg&signed_in=true"></script>
+    <script type="text/javascript" src='/javascripts/autofillLocationSearch.js'></script>
+    <script type="text/javascript" src='/javascripts/paymentSelectMenu.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV27rjUQoC_np17lGCrD4hmuIpA0ne4pg&signed_in=true&libraries=places&callback=initMap" async defer></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src='/javascripts/maps.js'></script>
-    <script type="text/javascript" src='/javascripts/paymentSelectMenu.js'></script>
+
+
 
 </body>
 
