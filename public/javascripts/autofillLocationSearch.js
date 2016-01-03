@@ -1,3 +1,14 @@
+// var autocomplete;
+//        function initialize() {
+//          autocomplete = new google.maps.places.Autocomplete(
+//              /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
+//              { types: ['geocode'] });
+//          google.maps.event.addListener(autocomplete, 'place_changed', function() {
+//          });
+//        }
+
+
+
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.5592,
